@@ -65,7 +65,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-      {/* Conteneur relatif pour bouton et logger */}
       <div className="fixed left-6 bottom-24 z-50" style={{ minWidth: '48px' }}>
         <button
           onClick={handleToggleLog}
@@ -74,7 +73,6 @@ export default function Home() {
         >
           V
         </button>
-        {/* Popover LogViewer positionné par rapport au bouton */}
         {(showLog || isClosing) && (
           <div
             ref={popoverRef}
@@ -94,12 +92,13 @@ export default function Home() {
               <div className="flex-1 p-0 overflow-auto">
                 <LogViewer logs={logs} />
               </div>
-              {/* Mini-carte log en bas */}
+            
+            {/* Log for most recent event */}
+
               {logs.length > 0 && (
                 <div className="flex flex-col bg-white dark:bg-gray-800 shadow-md rounded-md mx-2 my-2 px-2 py-1 min-h-[36px] border border-gray-100 dark:border-gray-700">
                   <span className="text-[10px] text-gray-400 font-semibold uppercase mb-0.5">Event recorder</span>
                   <div className="flex items-center gap-2">
-                    {/* Badge coloré selon le type */}
                     {(() => {
                       const last = logs[logs.length - 1];
                       let pillColor = 'bg-green-100 text-green-800 border-green-300';
@@ -121,7 +120,6 @@ export default function Home() {
                     <span className="truncate text-[10px] text-gray-800 dark:text-gray-100 font-mono flex-1">
                       {logs[logs.length - 1].message}
                     </span>
-                    {/* Date formatée */}
                     <span className="text-[9px] text-gray-400 font-mono ml-2 flex-shrink-0">
                       {(() => {
                         const d = new Date(logs[logs.length - 1].timestamp);
