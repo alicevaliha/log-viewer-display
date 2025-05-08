@@ -20,6 +20,6 @@ This tool helps visualize log events during development to make debugging easier
 Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/event-log-ui.git
+git clone https://github.com/alicevaliha/log-viewer-display
 cd log-viewer-display
 npm install
