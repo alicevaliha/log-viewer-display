@@ -1,4 +1,4 @@
-# 🔍 Event Logger Debug UI (Inspired by Vercel)
+# 🔍 Event Logger Debug UI 
 
 This is a lightweight debug interface for displaying event logs during development.  
 Inspired by the Vercel error overlay, it provides a small terminal-style window on the left side of the screen that can be toggled open or closed.
